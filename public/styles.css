@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+}
+
+.fullscreen {
+    padding: 20px;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    background-color: #d1d9fc;
+    background-image: -webkit-linear-gradient(65deg, #2b91b9 50%, #d1d9fc 50%);
+}
+
+.teacher{
+    color: black;
+    font-weight: bolder;
+}
+
+.aide {
+    color: grey;
+    font-weight: bolder;
+}
+
+.container {
+    height: 50vh;
+    border-bottom: 1px solid #F1F1F1;
+    border-top: 1px solid #F1F1F1;
+}
+
+.item {
+    color: white;
+    padding-top: 10px;
+    margin: 5px 0;
+    height: 50px;
+}
+
+.item:hover {
+    background-color: grey !important;
+}
+
+.item:active {
+    background-color: grey !important;
+}
+
+.addNewBtn {
+    margin-top: 5vh;
+}
+
+.modal-body {
+    text-align: left;
+}
+
+
+/* @media screen and (min-width: 600px) { */
+    .loginContainer {
+        /* display: flex; */
+        margin: auto;
+        display: inline-block;
+        
+    }
+    .loginForm {
+        /* border: grey solid; */
+        /* border-radius: round; */
+        width: 80vw;
+        padding: 20vh 0;
+        max-width: 600px;
+    }
+/* } */

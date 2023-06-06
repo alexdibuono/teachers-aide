@@ -1,0 +1,61 @@
+<%- include("partials/header") -%>
+
+<div class="fullScreen">
+
+    <section id="header">
+
+        <h1 class="display-1 m-3 text-muted fw-bold">Alex DiBuono</h1> <!--text-decoration-underline-->
+        
+        <h5 class="display-5 m-3 text-muted fw-bold">Class List</h5>
+
+    </section>
+    
+
+    <section id="list">
+
+        <div class="container overflow-auto mt-5">
+            <div class="row justify-content-center p-3">
+                <p class="m-0"><em> <%= noClasses %> </em></p>
+                <% for (i = 0; i < classItems.length; i++){ %>
+                    <a href="/classes/<%= classItems[i].name %>" class="item col-xs-10 col-md-5 col-lg-3 mx-2 rounded bg-light fw-bold text-muted text-decoration-none">
+                        <p> <%= classItems[i].name %> </p>
+                    </a>
+                <% } %>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section id="modal">
+    
+        <button type="button" class="btn btn-lg btn-secondary addNewBtn mt-5" data-bs-toggle="modal" data-bs-target="#addNewClass">Add New Class</button>
+
+        <div class="modal fade" id="addNewClass" tabindex="-1" aria-labelledby="addNewClassLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addNewClassLabel">Add New Class</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form action="/" method="post" class="addNew">
+                        <div class="modal-body" method="post" class="addNew">
+                            <div class="mb-3">
+                                <label for="class-name" class="col-form-label">New Class Name:</label>
+                                <input type="text" class="form-control" id="class-name" name="newClassItem" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" name="classList" class="button btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+<%- include("partials/footer") -%>
