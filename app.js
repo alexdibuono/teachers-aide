@@ -14,6 +14,8 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({extended: true}));
 app.use(express.static("public"));
 
+mongoose.set('strictQuery', true);
+
 mongoose.connect("mongodb://127.0.0.1:27017/teachersAideDB");
 
 const ActionsSchema = {

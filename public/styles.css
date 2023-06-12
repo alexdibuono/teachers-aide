@@ -50,6 +50,9 @@ body {
     text-align: left;
 }
 
+.back-btn {
+    position: inherit;
+}
 
 /* @media screen and (min-width: 600px) { */
     .loginContainer {
